@@ -214,18 +214,18 @@
 
     function do_save(url_data) {
         $(document).ready(function() {
-            $.ajax({
-                beforeSend: function() {
-                    console.log("Updating the sort order in the database.'")
-                },
-                complete: function(result) {
-                    console.log(result);
-                    console.log("Database has been updated.'")
-                },
-                data: url_data,
-                type: 'get',
-                url: '/kpa/work-v2/flat-plan/save'
-            });
+          $.ajax({
+            beforeSend: function() {
+                console.log("Updating the sort order in the database.'")
+            },
+            complete: function(result) {
+                console.log(result);
+                console.log("Database has been updated.'")
+            },
+            data: url_data,
+            type: 'get',
+            url: '/kpa/work-v2/flat-plan/save'
+          });
         })
     }
 
@@ -269,115 +269,115 @@
 
         switch (size) {
             case "1_8_HORIZONTAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_8_HORIZONTAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 53px; height: 27px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_8_HORIZONTAL' data-xy='53:27' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 53px; height: 27px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_8_VERTICAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_8_VERTICAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 33px; height: 50px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_8_VERTICAL' data-xy='27:53' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 27px; height: 53px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_6_HORIZONTAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_6_HORIZONTAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 53px; height: 27px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_6_HORIZONTAL' data-xy='70:33' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 70px; height: 33px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_6_VERTICAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_6_VERTICAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 33px; height: 70px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_6_VERTICAL' data-xy='33:70' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 33px; height: 70px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_4_HORIZONTAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_4_HORIZONTAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 53px; height: 59px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_4_HORIZONTAL' data-xy='59:26.5' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 59px; height: 26.5px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_4_VERTICAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_4_VERTICAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 53px; height: 70px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_4_VERTICAL' data-xy='26.5:59' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 26.5px; height: 59px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_4_BANNER":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_4_BANNER' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 27px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_4_BANNER' data-xy='109:26.533' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 26.533px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_3_SQUARE":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_3_SQUARE' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 53px; height: 69px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_3_SQUARE' data-xy='53:69' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 53px; height: 69px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_3_HORIZONTAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_3_HORIZONTAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 37px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_3_HORIZONTAL' data-xy='109:37' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 37px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_3_VERTICAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_3_VERTICAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left;  margin: 2px 0 0 2px; width: 36px; height: 124px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_3_VERTICAL' data-xy='37:124' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left;  margin: 2px 0 0 2px; width: 37px; height: 124px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_2_HORIZONTAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_2_HORIZONTAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 59px;'>";
-                html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
-                html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
-                break;
-
-            case "1_2_DOUBLE_SPREED":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_2_DOUBLE_SPREED' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 59px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_2_HORIZONTAL' data-xy='109:59' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 59px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_2_LONG_VERTICAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_2_LONG_VERTICAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left;  margin: 2px 0 0 2px; width: 53px; height: 124px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_2_LONG_VERTICAL' data-xy='53:124' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left;  margin: 2px 0 0 2px; width: 53px; height: 124px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "1_2_VERTICAL_ISLAND":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_2_VERTICAL_ISLAND' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left;  margin: 2px 0 0 2px; width: 53px; height: 85px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_2_VERTICAL_ISLAND' data-xy='53:85' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left;  margin: 2px 0 0 2px; width: 53px; height: 85px;'>";
+                html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
+                html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
+                break;
+
+            case "1_2_DOUBLE_SPREED":
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='1_2_DOUBLE_SPREED' data-xy='53:85' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 59px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "2_3_VERTICAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='2_3_VERTICAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left;  margin: 2px 0 0 2px; width: 70px; height: 124px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='2_3_VERTICAL' data-xy='70:124' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left;  margin: 2px 0 0 2px; width: 70px; height: 124px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "2_3_HORIZONTAL":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='2_3_HORIZONTAL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 84px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='2_3_HORIZONTAL' data-xy='109:84' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; float: left; margin: 2px 0 0 2px; width: 109px; height: 84px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "FULL_DOUBLE_SPREED":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='DOUBLE_SPREED' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; margin: -2px 0 0 0.3px; width: 112px; height: 127.3px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='DOUBLE_SPREED' data-xy='112:127.3' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; margin: -2px 0 0 0.3px; width: 112px; height: 127.3px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             case "FULL_BLEEDS":
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='FULL_BLEEDS' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; margin: -2px 0 0 0.3px; width: 112px; height: 127.3px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='FULL_BLEEDS' data-xy='112:127.3' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; margin: -2px 0 0 0.3px; width: 112px; height: 127.3px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
 
             default:
-                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='FULL' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; margin: 2px 0 0 2px; width: 109px; height: 124px;'>";
+                html = "<div id='"+id+"' data-company='"+client+"' data-magazine='"+magazine+"' data-size='FULL' data-xy='109:124' data-page='"+page_number+"' draggable='true' ondragstart='drag(event)' style='background: "+color+"; margin: 2px 0 0 2px; width: 109px; height: 124px;'>";
                 html += "<a href='#' onclick='remove_x("+id_s[1]+")' style='float: right; position: relative; z-index: 9;'> <img src='http://icons.iconarchive.com/icons/graphicloads/100-flat-2/24/close-icon.png' /> </a>";
                 html += "<p class='ad_title'><a href='#' onclick='on_show_info("+id_s[1]+")'>"+ acronym +"</a></div>";
                 break;
